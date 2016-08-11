@@ -52,6 +52,7 @@ public class UpdaeWidget {
             remoteViews.setImageViewResource(R.id.widget_image, R.drawable.ss_bg);
             Intent topicIntent = new Intent(context, MainActivity.class);
             topicIntent.setAction(WidgetAction.GOD_START_ACTIVITY);
+            topicIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             PendingIntent pendingIntentActivity = pendingIntent.getActivity(context, 0, topicIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             remoteViews.setOnClickPendingIntent(R.id.widget_image, pendingIntentActivity);
 
@@ -78,6 +79,7 @@ public class UpdaeWidget {
         //响应事件
         Intent intentEvent = new Intent(context, MainActivity.class);
         intentEvent.setAction(WidgetAction.GOD_GRID);
+        intentEvent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intentEvent, PendingIntent.FLAG_UPDATE_CURRENT);
         remoteViews.setPendingIntentTemplate(R.id.widget_grid, pendingIntent);
         appWidgetManager.updateAppWidget(appWidgetIds, remoteViews);
