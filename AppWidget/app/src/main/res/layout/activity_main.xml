@@ -10,7 +10,21 @@
     tools:context="com.godD.appwidget.MainActivity">
 
     <TextView
+        android:id="@+id/main_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_item_text"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="去添加Widget，并点击试试看吧!"
+        android:textColor="#0e0"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/main_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ss_bg"
+        android:visibility="gone" />
 </RelativeLayout>

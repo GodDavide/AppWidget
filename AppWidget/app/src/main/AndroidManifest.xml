@@ -2,7 +2,29 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.godD.appwidget">
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.lidroid.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="com.lidroid.permission.ACCESS_DOWNLOAD_MANAGER_ADVANCED" />
+    <uses-permission android:name="com.lidroid.permission.SEND_DOWNLOAD_COMPLETED_INTENTS" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 获取设备IMEI 表示唯一用户 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <!-- Allows access to the Download Manager -->
+
+    <!--百度ApiStore-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,6 +37,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".appWidget.MyAppWidgetProvider"
+            android:exported="true"
+            android:label="God David">
+            <intent-filter>
+                <!--AppWidget更新注册广播-->
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <!--AppWidget交互事件广播-->
+                <action android:name="android.appwidget.action.GOD_DAVID_GTIDVIEW" />
+                <action android:name="android.appwidget.action.GOD_DAVID_REFRESH" />
+                <action android:name="android.appwidget.action.GOD_DAVID_START_ACTIVITY" />
+
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget_provider" />
+        </receiver>
+
+        <service
+            android:name=".appWidget.WidgetGridService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <service android:name=".appWidget.MyService">
+            <intent-filter>
+                <action android:name="android.appwidget.action.GOD_DAVID_MYSERVICE"></action>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_widget"
+    android:paddingBottom="10dp">
+
+
+    <TextView
+        android:id="@+id/widget_title"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="God David"
+        android:textColor="#0000CD"
+        android:textSize="25dp" />
+
+
+    <ImageView
+        android:id="@+id/widget_refresh"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/widget_refresh" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/widget_title"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/widget_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/empty_image"
+            android:scaleType="fitCenter" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/widget_image"
+            android:layout_marginTop="5dp">
+
+            <GridView
+                android:id="@+id/widget_grid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#912CEE"
+                android:columnWidth="150dp"
+                android:gravity="center"
+                android:horizontalSpacing="1dp"
+                android:numColumns="auto_fit"
+                android:verticalSpacing="1dp" />
+
+            <RelativeLayout
+                android:id="@+id/widget_empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff">
+
+                <ProgressBar
+                    android:id="@+id/widget_progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/widget_progressBar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="使劲加载中... ..." />
+            </RelativeLayout>
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>
+
+
