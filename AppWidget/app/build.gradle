@@ -23,7 +23,6 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:22.+'
-    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
     compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
     compile files('libs/ApiStoreSDK1.0.4.jar')
 
