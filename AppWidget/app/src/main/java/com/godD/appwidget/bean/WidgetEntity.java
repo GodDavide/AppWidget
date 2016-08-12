@@ -4,7 +4,6 @@ import com.lidroid.xutils.db.annotation.Column;
 import com.lidroid.xutils.db.annotation.Id;
 import com.lidroid.xutils.db.annotation.Table;
 
-import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -12,16 +11,23 @@ import java.util.List;
  * @email david.forever.god@gmail.com
  * Learn from yesterday, live for today, hope for tomorrow.
  */
-public class WidgetEntity implements Serializable {
+public class WidgetEntity {
+
     /**
      * code : 200
      * msg : success
-     * newslist : [{"ctime":"2016-03-06 14:11","title":"Beautyleg &#8211; Arvi 私房美腿写真","description":"美女图片","picUrl":"http://m.xxxiao.com/wp-content/uploads/sites/3/2015/05/m.xxxiao.com_e7e731faf790487ccaf90d11774fae6b-760x500.jpg","url":"http://m.xxxiao.com/1353"},{"ctime":"2016-03-06 14:11","title":"美少女照片Archer小清新私拍","description":"美女图片","picUrl":"http://m.xxxiao.com/wp-content/uploads/sites/3/2015/04/m.xxxiao.com_dd10e91fcb9dd240038ae0bf7609944e-760x500.jpg","url":"http://m.xxxiao.com/146"},{"ctime":"2016-03-06 14:11","title":"[TGOD推女神] 泳池美人虞 75F乳神于姬Una私房泳装","description":"美女图片","picUrl":"http://m.xxxiao.com/wp-content/uploads/sites/3/2015/04/m.xxxiao.com_3e6ffd8abf2d3fbd1040b02edb6bcb66-760x500.jpg","url":"http://m.xxxiao.com/370"},{"ctime":"2016-03-06 14:11","title":"俏皮泳装巨乳美女杉原杏璃","description":"美女图片","picUrl":"http://m.xxxiao.com/wp-content/uploads/sites/3/2015/06/m.xxxiao.com_4458cc69f8353d1ab287f6ba830c4edb-760x500.jpg","url":"http://m.xxxiao.com/1939"},{"ctime":"2016-03-06 14:11","title":"中国乳神峰起樊玲","description":"美女图片","picUrl":"http://m.xxxiao.com/wp-content/uploads/sites/3/2015/07/m.xxxiao.com_ed8dedecf4d4a62f60528676f6649b85-760x500.jpg","url":"http://m.xxxiao.com/2187"},{"ctime":"2016-03-06 14:11","title":"巨乳杉原杏璃 Anri Sugihara 写真集 Gravure Idols &#038; Misty A","description":"美女图片","picUrl":"http://m.xxxiao.com/wp-content/uploads/sites/3/2015/06/m.xxxiao.com_8dc731bdd7da6e0362c7ddaf8ee0e813-760x500.jpg","url":"http://m.xxxiao.com/1531"},{"ctime":"2016-03-06 14:11","title":"韩国性感车模许允美人体艺术沙龙写真","description":"美女图片","picUrl":"http://m.xxxiao.com/wp-content/uploads/sites/3/2015/05/m.xxxiao.com_26dc4928630738bf68fa09f8b0d93d221-760x500.jpg","url":"http://m.xxxiao.com/1411"},{"ctime":"2016-03-06 14:11","title":"长发美女齐贝贝大秀性感火辣身姿","description":"美女图片","picUrl":"http://t1.27270.com/uploads/tu/201507/375/slt.jpg","url":"http://www.27270.com/ent/meinvtupian/2015/122489.html"},{"ctime":"2016-03-06 14:11","title":"混血美女尽展清新可人靓照","description":"美女图片","picUrl":"http://t1.27270.com/uploads/150727/8-150HGG21ME.jpg","url":"http://www.27270.com/ent/meinvtupian/2015/49617.html"},{"ctime":"2016-03-06 14:11","title":"嫩模刘嘉琦白色衬衫丁字裤展千娇百媚魅力","description":"美女图片","picUrl":"http://t1.27270.com/uploads/tu/201507/391/slt.jpg","url":"http://www.27270.com/ent/meinvtupian/2015/122766.html"}]
+     * newslist : [{"ctime":"2016-06-07","title":"美国队长在中国的话，会不会拍成这样？","description":"奔波儿灞与灞波儿奔","picUrl":"http://t1.qpic.cn/mblogpic/f01a972dbcc1060fd456/2000","url":"http://mp.weixin.qq.com/s?__biz=MjM5NzEyMTUxNg==&idx=5&mid=2655198291&sn=c17241c8f3aa665dec53c20db77baf93"},{"ctime":"2016-05-28","title":"美国队长变节成九头蛇卧底，我们该恭喜漫威吗？","description":"虎嗅网","picUrl":"http://zxpic.gtimg.com/infonew/0/wechat_pics_-5815039.jpg/640","url":"http://mp.weixin.qq.com/s?__biz=MTQzMjE1NjQwMQ==&idx=1&mid=2655533855&sn=9891d09ecccb857c8e0d25bb8a49f50b"},{"ctime":"2016-05-26","title":"美国队长是卧底？！漫威：我们从2014年就在盘算这事~","description":"果壳网","picUrl":"http://zxpic.gtimg.com/infonew/0/wechat_pics_-5747356.jpg/640","url":"http://mp.weixin.qq.com/s?__biz=MTg1MjI3MzY2MQ==&idx=2&mid=2651676872&sn=96a55b6587beba061d95568869ce0c1b"},{"ctime":"2016-05-26","title":"美国队长成大反派？！主演克里斯埃文斯都懵圈了","description":"娱乐星天地","picUrl":"http://zxpic.gtimg.com/infonew/0/wechat_pics_-5744473.jpg/640","url":"http://mp.weixin.qq.com/s?__biz=MjM5Nzg4ODg1Mg==&idx=2&mid=2655476159&sn=547cd1d37a5a35f6550448bc46f1c97e"},{"ctime":"2016-05-26","title":"朋友圈已刷爆：美国队长叛变成九头蛇卧底！","description":"冷丫","picUrl":"http://zxpic.gtimg.com/infonew/0/wechat_pics_-5739045.jpg/640","url":"http://mp.weixin.qq.com/s?__biz=MjM5NzIyODk4MA==&idx=4&mid=2651373945&sn=a7433c5889dd87e95639c91c56c736dc"},{"ctime":"2016-05-26","title":"漫威世界颠覆！美国队长竟是九头蛇特工扮演者懵逼","description":"驱动之家","picUrl":"http://zxpic.gtimg.com/infonew/0/wechat_pics_-5740040.jpg/640","url":"http://mp.weixin.qq.com/s?__biz=MjM5MTAxNjIyMA==&idx=4&mid=2655036994&sn=765ae3b53994301cc6bbc3edf4ca0a0a"},{"ctime":"2016-05-26","title":"美国队长是秘密特工要黑化了？这是噱头还是噱头还是噱头呢？","description":"腾讯娱乐","picUrl":"http://zxpic.gtimg.com/infonew/0/wechat_pics_-5737531.jpg/640","url":"http://mp.weixin.qq.com/s?__biz=MTA5NTIzNDE2MQ==&idx=2&mid=2653336021&sn=34a8bce27f6f1ac187781de242427e25"},{"ctime":"2016-05-23","title":"它们居然把《美国队长》打下来了，这是一群什么鸟？！","description":"南都全娱乐","picUrl":"http://zxpic.gtimg.com/infonew/0/wechat_pics_-5634962.jpg/640","url":"http://mp.weixin.qq.com/s?__biz=MjM5MTE1ODI2MA==&idx=3&mid=2651787917&sn=adea63cee245c19fd1a2c09a5e6380ad"},{"ctime":"2016-05-23","title":"《美国队长3：内战》：对于自我坚信我们可以付出多少","description":"三联生活周刊","picUrl":"http://zxpic.gtimg.com/infonew/0/wechat_pics_-5628967.jpg/640","url":"http://mp.weixin.qq.com/s?__biz=MTc5MTU3NTYyMQ==&idx=1&mid=2650607614&sn=cc7092fe6c5e941d00f6dd6877b7c934"},{"ctime":"2016-05-23","title":"《美国队长》凭什么70年人气不减丨壹读精选","description":"壹读","picUrl":"http://zxpic.gtimg.com/infonew/0/wechat_pics_-5612566.jpg/640","url":"http://mp.weixin.qq.com/s?__biz=OTE4MzAyODYx&idx=2&mid=2652193808&sn=2d8e482cd92a938838d509f22568becf"}]
      */
-    private static final long serialVersionUID = -7060210544600464481L;
+
     private int code;
     private String msg;
-
+    /**
+     * ctime : 2016-06-07
+     * title : 美国队长在中国的话，会不会拍成这样？
+     * description : 奔波儿灞与灞波儿奔
+     * picUrl : http://t1.qpic.cn/mblogpic/f01a972dbcc1060fd456/2000
+     * url : http://mp.weixin.qq.com/s?__biz=MjM5NzEyMTUxNg==&idx=5&mid=2655198291&sn=c17241c8f3aa665dec53c20db77baf93
+     */
 
     private List<NewslistBean> newslist;
 
@@ -101,14 +107,5 @@ public class WidgetEntity implements Serializable {
         public void setUrl(String url) {
             this.url = url;
         }
-    }
-
-    @Override
-    public String toString() {
-        return "Entity{" +
-                "code=" + code +
-                ", msg='" + msg + '\'' +
-                ", newslist=" + newslist +
-                '}';
     }
 }
