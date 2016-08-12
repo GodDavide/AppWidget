@@ -10,7 +10,7 @@
         android:id="@+id/item_image"
         android:layout_width="match_parent"
         android:layout_height="110dp"
-        android:scaleType="fitCenter" />
+        android:scaleType="centerCrop" />
 
 
     <TextView

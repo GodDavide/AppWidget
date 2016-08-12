@@ -22,7 +22,7 @@ public class GridInfoModelImpl implements GridInfoModel {
          */
         Parameters para = new Parameters();
 //        para.put("10", "f8ecaaef4773b7dff98ded139950659d");
-        ApiStoreSDK.execute("http://apis.baidu.com/txapi/mvtp/meinv/?num=30&key=f8ecaaef4773b7dff98ded139950659d",
+        ApiStoreSDK.execute("http://apis.baidu.com/txapi/huabian/newtop/?num=10&page=1&key=f8ecaaef4773b7dff98ded139950659d",
                 ApiStoreSDK.GET,
                 para,
                 new ApiCallBack() {
@@ -32,6 +32,7 @@ public class GridInfoModelImpl implements GridInfoModel {
                         Gson gson = new Gson();
                         WidgetEntity entity = gson.fromJson(responseString, WidgetEntity.class);
                         onLoadWidgetInfoListener.loadSuccess(entity);
+
 
                     }
 
