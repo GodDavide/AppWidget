@@ -3,7 +3,7 @@
 ###详尽的AppWidget Demo<br>
  
 ####因为项目的要求，最近制作了一个相对比较复杂的AppWidget，因为其复杂性及要求的特殊性，<br>
-所以，必须深入的了解AppWidget。<br>
+####所以，必须深入的了解AppWidget。<br>
 ###项目原图：<br>
 ![](https://github.com/GodDavide/AppWidget/blob/master/infoImage/image.jpg)  <br>
 
