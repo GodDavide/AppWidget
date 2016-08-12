@@ -25,14 +25,13 @@ AppWidget就是用户在桌面上添加的小窗口或者说小部件，利用�
 ###项目效果图：<br>
 ![](https://github.com/GodDavide/AppWidget/blob/master/infoImage/widget_show.jpg)  
 ###项目文件结构：
-![](https://github.com/GodDavide/AppWidget/blob/master/infoImage/widget_show.jpg)  
+![](https://github.com/GodDavide/AppWidget/blob/master/infoImage/jiegou.jpg)  
 ###jar包需求：
 ```java
-
-compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'<br>
-compile files('libs/ApiStoreSDK1.0.4.jar')<br>
-<!-- 项目中我直接将已下载好的xUtils Jar放在了labs下 --><br>
-compile 'com.jiechic.library:xUtils:2.6.14'<br>
+compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+compile files('libs/ApiStoreSDK1.0.4.jar')
+<!-- 项目中我直接将已下载好的xUtils Jar放在了labs下 -->
+compile 'com.jiechic.library:xUtils:2.6.14'
 
 ```
 ###代码编写：<br>
