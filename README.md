@@ -1,7 +1,5 @@
-﻿# AppWidget<br>
-
-###关于AppWidget的那些事... ...<br>(参考的网络资源：Thanks for hongyangAndroid)
-<br>
+# AppWidget<br>
+###关于AppWidget的那些事... ...<br>
 <br>
 
 __期待共同进步__
