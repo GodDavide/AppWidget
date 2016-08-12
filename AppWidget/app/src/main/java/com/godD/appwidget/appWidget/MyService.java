@@ -76,13 +76,11 @@ public class MyService extends Service implements GridInfoView {
         //利用MVP模式下载数据，下载成功后，首先更新数据库，然后，通过Handler返回信息，执行刷新Widget功能。
         try {
             if (widgetEntity != null) {
-                Log.e("David", "______loadWidgetInfo: ___不为空___" + widgetEntity.getNewslist().size());
                 //首先，清空数据库，然后，将新数据添加进去。
                 MyApplication.getMyApp().getDbUtils().deleteAll(WidgetEntity.NewslistBean.class);
                 List<WidgetEntity.NewslistBean> all = MyApplication.getMyApp().getDbUtils().findAll(WidgetEntity.NewslistBean.class);
                 for (int i = 0; i < widgetEntity.getNewslist().size(); i++) {
                     String picUrl = widgetEntity.getNewslist().get(i).getPicUrl();
-                    Log.e("David", "______loadWidgetInfo: ___pic___" + picUrl);
                     MyApplication.getMyApp().getDbUtils().saveOrUpdate(widgetEntity.getNewslist().get(i));
                 }
                 Message obtain = Message.obtain();

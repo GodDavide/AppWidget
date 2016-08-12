@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         switch (intent.getAction()) {
             case WidgetAction.GOD_GRID:
-                //接口中有图片网址，就顺便让大家去看看吧,虽然，很俗... ...
+                //接口中有图片网址，就顺便让大家去看看吧
                 String url = intent.getStringExtra("url");
                 Uri uri = Uri.parse(url);
                 Intent intentWeb = new Intent(Intent.ACTION_VIEW, uri);

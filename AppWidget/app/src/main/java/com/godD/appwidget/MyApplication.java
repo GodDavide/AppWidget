@@ -20,7 +20,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         this.myApp = this;
-        ApiStoreSDK.init(this, "f8ecaaef4773b7dff98ded139950659d");
+        ApiStoreSDK.init(this, "您自己的ApiKey");
         initWidgetDb();
     }
 

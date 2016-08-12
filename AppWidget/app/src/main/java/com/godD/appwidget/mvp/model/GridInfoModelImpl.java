@@ -21,8 +21,7 @@ public class GridInfoModelImpl implements GridInfoModel {
          *  测试接口使用的是百度ApiSore免费接口
          */
         Parameters para = new Parameters();
-//        para.put("10", "f8ecaaef4773b7dff98ded139950659d");
-        ApiStoreSDK.execute("http://apis.baidu.com/txapi/huabian/newtop/?num=10&page=1&key=f8ecaaef4773b7dff98ded139950659d",
+        ApiStoreSDK.execute("http://apis.baidu.com/txapi/huabian/newtop/?num=10&page=1&key=您自己的ApiKey",
                 ApiStoreSDK.GET,
                 para,
                 new ApiCallBack() {

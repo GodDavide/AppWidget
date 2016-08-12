@@ -23,7 +23,6 @@ public class UpdaeWidget {
     private AppWidgetManager appWidgetManager;
 
     public UpdaeWidget(Context context, int[] appWidgetIds, AppWidgetManager appWidgetManager) {
-        Log.e("David", "______UpdaeWidget: ___uuuu___");
         this.context = context;
         this.appWidgetIds = appWidgetIds;
         this.appWidgetManager = appWidgetManager;

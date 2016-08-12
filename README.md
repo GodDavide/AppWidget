@@ -1,6 +1,7 @@
-# AppWidget<br>
+﻿# AppWidget<br>
 
 ####因为项目的特殊性，最近制作了一个相当复杂的AppWidget，由于我也是初次制作，而且因其特殊性，难免会很艰难。<br>
+###项目原图：<br>
 ####在项目过程中，发现网上并没有很详细的WidgetDemo，现在我项目基础上，重新写一个Demo，争取在此Demo中，展现出Widget的所有功能。<br>
 ###功能列表：<br>
 #####普通控件展示数据<br>
@@ -10,4 +11,4 @@
 #####
 ##备注：功能列表为临时表，列出已经实现的功能，后期会不断更新完善
 
-
+![](https://github.com/GodDavide/AppWidget/blob/master/infoImage/widget_show.jpg)  
