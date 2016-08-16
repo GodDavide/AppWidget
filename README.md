@@ -12,12 +12,12 @@
 #####普通控件展示数据<br>
 #####Widget与app的交互<br>
 #####Gridview和Listview展示数据<br>
-#####刷新功能，临时包括:开机刷新、首次创建刷新、点击按钮刷新<br>
+#####刷新功能，临时包括:开机刷新、首次创建刷新、点击按钮刷新。<br>
+######有关定时刷新功能，可直接在appwidget-provider.xml文件夹中设置updatePeriodMillis属性；也可以自定义AlarmManager<br>
+######设置定时器实现定时更新。在此提供本人的一个简单的AlarmManager类，仅供参考。（AlarmManager见文章末，暂时项目中没有添加）<br>
 
 ##备注：
-####功能列表为临时表，列出已经实现的功能，后期会不断更新完善<br>
 ####项目中的接口用的是百度ApiStore里的免费测试接口，请下载下代码后，替换成您自己的ApiKey.
-
 
 
                      start
@@ -452,6 +452,39 @@ public class UpdaeWidget {
 
 ```
 #####最后：相关的响应事件，都在UpdateWidget和WidgetGridService中有详细的注释。可在代码中查看。
+
+#####AlarmManager工具类：
+```java
+public class MyAlarmManager {
+    private Context context;
+    public static int[] appWidgetIds;
+
+    public MyAlarmManager(Context context, int[] appWidgetIds) {
+        this.context = context;
+        this.appWidgetIds = appWidgetIds;
+
+        AlarmManager alarmMgr = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent();//AppWidgetManager.ACTION_APPWIDGET_UPDA
+        intent.setAction("android.intent.action.MY_BROADCAST");
+        Bundle bundle = new Bundle();
+        bundle.putIntArray(AppWidgetManager.EXTRA_APPWIDGET_IDS, appWidgetIds);
+        intent.putExtras(bundle);
+
+        int requestCode = 0;
+        PendingIntent pendIntent = PendingIntent.getBroadcast(context, requestCode, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        /**
+         * @author Davide  created at 2016/7/19 17:12
+         * 5秒后发送广播，然后每个**秒重复发广播。广播都是直接发到AlarmReceiver的
+         */
+        long triggerAtTime = SystemClock.elapsedRealtime() + 1 * 1000;//闹钟开始时间
+        int interval = 20 * 1000;//闹钟间隔时间。ps：仅供测试用，实际项目时间间隔要大得多。
+        alarmMgr.setRepeating(AlarmManager.RTC, triggerAtTime, interval, pendIntent);
+
+    }
+
+
+}
+```
 
                      end
 
