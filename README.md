@@ -7,26 +7,26 @@
 ### 项目原图：<br>
 ![](https://github.com/GodDavide/AppWidget/blob/master/infoImage/image.jpg)  <br>
 
-####在项目过程中，发现网上并没有很详细的WidgetDemo，现在我项目基础上，重新写一个Demo，争取在此Demo中，展现出Widget的所有功能。<br>
-###功能列表：<br>
-#####普通控件展示数据<br>
-#####Widget与app的交互<br>
-#####Gridview和Listview展示数据<br>
-#####刷新功能，临时包括:开机刷新、首次创建刷新、点击按钮刷新。<br>
-######有关定时刷新功能，可直接在appwidget-provider.xml文件夹中设置updatePeriodMillis属性；也可以自定义AlarmManager<br>
-######设置定时器实现定时更新。在此提供本人的一个简单的AlarmManager类，仅供参考。（AlarmManager见文章末，暂时项目中没有添加）<br>
+#### 在项目过程中，发现网上并没有很详细的WidgetDemo，现在我项目基础上，重新写一个Demo，争取在此Demo中，展现出Widget的所有功能。<br>
+### 功能列表：<br>
+##### 普通控件展示数据<br>
+##### Widget与app的交互<br>
+##### Gridview和Listview展示数据<br>
+##### 刷新功能，临时包括:开机刷新、首次创建刷新、点击按钮刷新。<br>
+###### 有关定时刷新功能，可直接在appwidget-provider.xml文件夹中设置updatePeriodMillis属性；也可以自定义AlarmManager<br>
+###### 设置定时器实现定时更新。在此提供本人的一个简单的AlarmManager类，仅供参考。（AlarmManager见文章末，暂时项目中没有添加）<br>
 
-##备注：
-####项目中的接口用的是百度ApiStore里的免费测试接口，请下载下代码后，替换成您自己的ApiKey.
+## 备注：
+#### 项目中的接口用的是百度ApiStore里的免费测试接口，请下载下代码后，替换成您自己的ApiKey.
 
 
                      start
 AppWidget就是用户在桌面上添加的小窗口或者说小部件，利用这个小窗口可以给用户提供更加方便快捷的操作。<br>
-###项目效果图：<br>
+### 项目效果图：<br>
 ![](https://github.com/GodDavide/AppWidget/blob/master/infoImage/widget_show.jpg)  
-###项目文件结构：
+### 项目文件结构：
 ![](https://github.com/GodDavide/AppWidget/blob/master/infoImage/jiegou.jpg)  
-###jar包需求：
+### jar包需求：
 ```java
 compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
 compile files('libs/ApiStoreSDK1.0.4.jar')
@@ -34,8 +34,8 @@ compile files('libs/ApiStoreSDK1.0.4.jar')
 compile 'com.jiechic.library:xUtils:2.6.14'
 
 ```
-###代码编写：<br>
-#####step1:在res文件夹下新建一个xml文件夹，然后在xml目录下创建一个名为app_widget_privider.xml文件(刻在文件结构图中查看位置)
+### 代码编写：<br>
+##### step1:在res文件夹下新建一个xml文件夹，然后在xml目录下创建一个名为app_widget_privider.xml文件(刻在文件结构图中查看位置)
 ```java
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -51,7 +51,7 @@ compile 'com.jiechic.library:xUtils:2.6.14'
 </appwidget-provider>
 
 ```
-#####step2:创建Widget布局xml文件；
+##### step2:创建Widget布局xml文件；
 ```java
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -142,7 +142,7 @@ compile 'com.jiechic.library:xUtils:2.6.14'
 
 
 ```
-#####step3:编写处理Widget的java类，使其继承AppWidgetProvider;
+##### step3:编写处理Widget的java类，使其继承AppWidgetProvider;
 ```java
 
 package com.godD.appwidget.appWidget;
@@ -221,7 +221,7 @@ public class MyAppWidgetProvider extends AppWidgetProvider {
 
 
 ```
-#####step4:编写服务类，在服务类里实现网络请求，并在请求成功后更新Widget；
+##### step4:编写服务类，在服务类里实现网络请求，并在请求成功后更新Widget；
 ```java
 package com.godD.appwidget.appWidget;
 
@@ -416,7 +416,7 @@ public class UpdaeWidget {
 
 ```
 
-#####step5:特别注意，不要忘了在清单文件中注册
+##### step5:特别注意，不要忘了在清单文件中注册
 ```java
  <application
 	<!-- 注册 WidgetProvider -->
@@ -451,9 +451,9 @@ public class UpdaeWidget {
     </application>
 
 ```
-#####最后：相关的响应事件，都在UpdateWidget和WidgetGridService中有详细的注释。可在代码中查看。
+##### 最后：相关的响应事件，都在UpdateWidget和WidgetGridService中有详细的注释。可在代码中查看。
 
-#####AlarmManager工具类：
+##### AlarmManager工具类：
 ```java
 public class MyAlarmManager {
     private Context context;
@@ -493,13 +493,13 @@ public class MyAlarmManager {
 
 __Remember Me__
 
-#####@ Name  : David
+##### @ Name  : David
 
-#####@ email ：david.forever.god@gmail.com
+##### @ email ：david.forever.god@gmail.com
 
-#####Learn from yesterday, live for today, hope for tomorrow.<br>
+##### Learn from yesterday, live for today, hope for tomorrow.<br>
 
 
-###Thanks for you!!!<br>
+### Thanks for you!!!<br>
 
-###Have a nice day !!!
+### Have a nice day !!!
