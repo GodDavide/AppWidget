@@ -1,10 +1,10 @@
 ﻿# AppWidget<br>
-###关于AppWidget的那些事... ...<br>
-###详尽的AppWidget Demo<br>
+### 关于AppWidget的那些事... ...<br>
+### 详尽的AppWidget Demo<br>
  
-####因为项目的要求，最近制作了一个相对比较复杂的AppWidget，因为其复杂性及要求的特殊性，<br>
-####所以，必须深入的了解AppWidget。<br>
-###项目原图：<br>
+#### 因为项目的要求，最近制作了一个相对比较复杂的AppWidget，因为其复杂性及要求的特殊性，<br>
+#### 所以，必须深入的了解AppWidget。<br>
+### 项目原图：<br>
 ![](https://github.com/GodDavide/AppWidget/blob/master/infoImage/image.jpg)  <br>
 
 ####在项目过程中，发现网上并没有很详细的WidgetDemo，现在我项目基础上，重新写一个Demo，争取在此Demo中，展现出Widget的所有功能。<br>
